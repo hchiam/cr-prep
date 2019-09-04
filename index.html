@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <div id="button-bar">
+      <button id="print-page" onclick="printPage()" title="This button will not show up in the printout.">
+        Print
+      </button>
+    </div>
+    <div id="checkbox-box">
+      <p id="fun-text" style="background:black;">_</p>
+      <h3 style="text-align:center; margin-bottom:5px;"><a id="url" title="https://cr-prep.glitch.me/" onclick="copyUrlToClipboard()">I chose to:</a></h3>
+      <input id="0" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Do a more painful/risky task first</span><br>
+      <input id="1" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Write a task-tackling strategy</span><br>
+      <input id="2" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Check existing code base solutions</span><br>
+      <input id="3" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Google existing solutions</span><br>
+      <input id="4" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Test in IE</span><br>
+      <input id="5" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Create/run unit tests (consider 
+          <span onclick="alert('SCIE (or ICES) = Simple, Complex, Invalid, Empty')"
+                title="Simple, Complex, Invalid, Empty" 
+                class="hover-info">SCIE</span>)
+        </span>
+      <br>
+      <input id="6" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Run UI style test</span><br>
+      <input id="7" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Run site render test</span><br>
+      <input id="8" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Run site perf test</span><br>
+      <input id="9" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up"
+                                                                         title="(Reason to go here)">Demo to non-task tester</span><br>
+    </div>
+  </body>
+</html>
