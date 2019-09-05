@@ -29,7 +29,7 @@ function updateImage(id) {
   b = 'e1a2b3c4df'[b] + b;
   c = 'abcdef1234'[c] + c;
   code = obfuscateCode(uniqueNumberString);
-  document.getElementById('fun-text').innerHTML = 'ID ' + code + ' ' + getTodayDate();
+  document.getElementById('fun-text').innerHTML = 'Copy-paste prevention ID ' + code + '-' + getTodayDate();
   document.getElementById('fun-text').style.background = '#' + a + b + c;
 }
 
@@ -65,9 +65,9 @@ function getTodayDate() {
   var dd = String(today.getDate()).padStart(2, '0');
   var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
   var yyyy = today.getFullYear();
-  var suffix = 'th';
-  if (dd[1] == '1') suffix = 'st';
-  if (dd[1] == '2') suffix = 'nd';
-  if (dd[1] == '3') suffix = 'rd';
-  return yyyy + '/' + mm + '/' + dd + suffix;
+  var suffix = 'TH';
+  if (dd[1] == '1') suffix = 'ST';
+  if (dd[1] == '2') suffix = 'ND';
+  if (dd[1] == '3') suffix = 'RD';
+  return yyyy + '-' + mm + '-' + dd + suffix;
 }
