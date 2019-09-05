@@ -130,8 +130,8 @@ input + br, br { /* br's right after input's */
 
 #checkbox-box {
   position: absolute;
-  width: 350px;
-  left: calc(50% - 350px/2);
+  width: 550px;
+  left: calc(50% - 550px/2);
   text-align: left;
   border: solid black;
 }
