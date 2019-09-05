@@ -62,10 +62,14 @@ hr {
 }
 
 @media print {    
+
+  #button-bar { /* hide buttons upon print */
+      display: none !important;
+  }
   
-    #button-bar { /* hide buttons upon print */
-        display: none !important;
-    }
+  #hover-info {
+    display: none !important;
+  }
   
 }
 
@@ -92,6 +96,17 @@ hr {
     background: yellow !important;
     padding: 10px !important;
   }
+  
+  #hover-info {
+    position: absolute;
+    top: 600px;
+    width: 350px;
+    left: calc(50% - 350px/2);
+    text-align: center;
+    background: yellow;
+    color: black;
+  }
+  
 }
 
 input {
