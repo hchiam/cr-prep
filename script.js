@@ -78,8 +78,8 @@ function hoverInfo(i) {
   } else {
     let info = [
       'Buffer time for the end of the sprint. You can fit more in a jar if you put the bigger rocks in before the smaller rocks.',
-      'Make sure you understand the problem. A list helps externalize cognitive load and combats context switching costs.',
-      "Don't reinvent the wheel. Consistency helps with readability and reuse.",
+      "Making sure you really understand the problem saves time. A list helps externalize cognitive load and combats context switching costs. If you find something outside of scope or outside your skills, don't be afraid to ask!",
+      "Don't reinvent the wheel. Consistency helps with readability and reuse. Try searching for yourself for 15 minutes. If you're still stuck, don't be afraid to ask for help!",
       "Others have probably asked the same thing. Sometimes new solutions pop up.",
       'Many customers still use IE.',
       "Be confident that future changes don't break existing logic.",
