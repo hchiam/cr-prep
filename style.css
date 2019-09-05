@@ -137,6 +137,7 @@ input + br, br { /* br's right after input's */
 }
 
 #fun-text {
+  -webkit-print-color-adjust: exact;
   text-align: center;
   margin: auto;
   padding: 3px;
