@@ -61,13 +61,33 @@ function copyUrlToClipboard() {
 } 
 
 function getTodayDate() {
-  var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = today.getFullYear();
-  var suffix = 'TH';
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, '0');
+  let mm = String(today.getMonth() + 1).padStart(2, '0'); // month 0 = January
+  let yyyy = today.getFullYear();
+  let suffix = 'TH';
   if (dd[1] == '1') suffix = 'ST';
   if (dd[1] == '2') suffix = 'ND';
   if (dd[1] == '3') suffix = 'RD';
   return yyyy + '-' + mm + '-' + dd + suffix;
+}
+
+function hoverInfo(i) {
+  if (i == -1) {
+    document.getElementById('hover-info').innerHTML = '';
+  } else {
+    let info = [
+      'Buffer time for the end of the sprint. You can fit more in a jar if you put the bigger rocks in before the smaller rocks.',
+      'Make sure you understand the problem. A list helps externalize cognitive load and combats context switching costs.',
+      "Don't reinvent the wheel. Consistency helps with readability and reuse.",
+      "Others have probably asked the same thing. Sometimes new solutions pop up.",
+      'Many customers still use IE.',
+      "Be confident that future changes don't break existing logic.",
+      'Avoid inconsistencies in the UI (which can cause user confusion/mistakes).',
+      'Ensure performance is not affected.',
+      "Check that existing unit tests aren't broken by your changes.",
+      'Avoid making reviewers look at the CR twice. And fresh eyes catch blind spots.',
+    ];
+    document.getElementById('hover-info').innerHTML = "Here's why: " + info[i];
+  }
 }
