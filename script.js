@@ -17,6 +17,7 @@ function updateImage(id) {
     code = '_';
     document.getElementById('fun-text').innerHTML = code;
     document.getElementById('fun-text').style.background = 'black';
+    showFunDrawing();
     return;
   }
   let binaryToDecimal = parseInt(Number(checked.map(x => x ? 1 : 0).join('')), 2);
@@ -31,6 +32,7 @@ function updateImage(id) {
   code = obfuscateCode(uniqueNumberString);
   document.getElementById('fun-text').innerHTML = 'Copy-paste prevention ID ' + code + '-' + getTodayDate();
   document.getElementById('fun-text').style.background = '#' + a + b + c;
+  showFunDrawing();
 }
 
 function obfuscateCode(code) {
@@ -91,3 +93,154 @@ function hoverInfo(i) {
     document.getElementById('hover-info').innerHTML = "Here's why: " + info[i];
   }
 }
+
+/////////////////
+
+const w = document.getElementById('checkbox-box').offsetWidth;
+const h = document.getElementById('checkbox-box').offsetHeight;
+const offsetx = 0;
+const offsety = 0;
+let points = '';
+let x, y;
+
+document.getElementById('fun-drawing').setAttribute("width", w + 'px');
+document.getElementById('fun-drawing').setAttribute("height", h + 'px');
+
+function showFunDrawing() {
+  addPoints();
+  showLine();
+}
+
+function showLine() {
+  document.getElementById('line').setAttribute('points', points);
+}
+
+function addPoint(x,y) {
+  points += ' ' + (x+offsetx) + ',' + (y+offsety);
+}
+
+function addPoints() {
+  let [x, y] = [0, 0];
+  moves.x = w/2;
+  moves.y = h/2;
+  // moves.moveDown()
+  //   .moveRight()
+  //   .moveDown()
+  //   .moveLeft()
+  //   .moveDown()
+  //   .moveRight()
+  //   .moveRight()
+  //   .moveUp()
+  //   .moveUpRight()
+  //   .moveDownRight()
+  //   .moveUp();
+  points = ''; // reset per keypress
+  let sequence = '';
+  sequence += code;
+  let mapping = 'A2B3C4D5E6'
+  for (var letter of sequence) {
+    switch(letter) {
+      case mapping[0]:
+        moves.moveUpLeft();
+        moves.moveUpRight();
+        moves.moveDownRight();
+        moves.moveDownLeft();
+        moves.moveUpLeft();
+        break;
+      case mapping[1]:
+        moves.moveUpLeft();
+        break;
+      case mapping[2]:
+        moves.moveUp();
+        break;
+      case mapping[3]:
+        moves.moveUpRight();
+        break;
+      case mapping[4]:
+        moves.moveLeft();
+        break;
+      case mapping[5]:
+        moves.moveUpLeft();
+        moves.moveDownRight();
+        moves.moveDownRight();
+        moves.moveUpLeft();
+        moves.moveUpRight();
+        moves.moveDownLeft();
+        moves.moveDownLeft();
+        moves.moveUpRight();
+        break;
+      case mapping[6]:
+        moves.moveRight();
+        break;
+      case mapping[7]:
+        moves.moveDownLeft();
+        break;
+      case mapping[8]:
+        moves.moveDown();
+        break;
+      case mapping[9]:
+        moves.moveDownRight();
+        break;
+    }
+  }
+}
+
+var moves = {
+  x:0,
+  y:0,
+  d:h/5,
+
+  moveUp: function() {
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveDown: function() {
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveLeft: function() {
+    this.x -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveRight: function() {
+    this.x += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveUpRight: function() {
+    this.x += this.d;
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveDownRight: function() {
+    this.x += this.d;
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveUpLeft: function() {
+    this.x -= this.d;
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveDownLeft: function() {
+    this.x -= this.d;
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  }
+}
+
+///////////////////
