@@ -94,9 +94,7 @@ function hoverInfo(i) {
   }
 }
 
-
 /////////////////
-
 
 const w = document.getElementById('checkbox-box').offsetWidth;
 const h = document.getElementById('checkbox-box').offsetHeight;
@@ -108,74 +106,17 @@ let x, y;
 document.getElementById('fun-drawing').setAttribute("width", w + 'px');
 document.getElementById('fun-drawing').setAttribute("height", h + 'px');
 
+function showFunDrawing() {
+  addPoints();
+  showLine();
+}
+
+function showLine() {
+  document.getElementById('line').setAttribute('points', points);
+}
+
 function addPoint(x,y) {
   points += ' ' + (x+offsetx) + ',' + (y+offsety);
-}
-
-var moves = {
-  x:0,
-  y:0,
-  d:h/5,
-
-  moveUp: function() {
-    this.y -= this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveDown: function() {
-    this.y += this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveLeft: function() {
-    this.x -= this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveRight: function() {
-    this.x += this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveUpRight: function() {
-    this.x += this.d;
-    this.y -= this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveDownRight: function() {
-    this.x += this.d;
-    this.y += this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveUpLeft: function() {
-    this.x -= this.d;
-    this.y -= this.d;
-    addPoint(this.x,this.y);
-    return this;
-  },
-
-  moveDownLeft: function() {
-    this.x -= this.d;
-    this.y += this.d;
-    addPoint(this.x,this.y);
-    return this;
-  }
-}
-
-function createX(start,end,interval) {
-  let xv = [];
-  for (let i=start; i<=end; i+=interval) {
-    xv.push(i);
-  }
-  return xv;
 }
 
 function addPoints() {
@@ -244,14 +185,62 @@ function addPoints() {
   }
 }
 
-function showLine() {
-  document.getElementById('line').setAttribute('points', points);
-}
+var moves = {
+  x:0,
+  y:0,
+  d:h/5,
 
-function showFunDrawing() {
-  addPoints();
-  showLine();
-}
+  moveUp: function() {
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
 
+  moveDown: function() {
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveLeft: function() {
+    this.x -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveRight: function() {
+    this.x += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveUpRight: function() {
+    this.x += this.d;
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveDownRight: function() {
+    this.x += this.d;
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveUpLeft: function() {
+    this.x -= this.d;
+    this.y -= this.d;
+    addPoint(this.x,this.y);
+    return this;
+  },
+
+  moveDownLeft: function() {
+    this.x -= this.d;
+    this.y += this.d;
+    addPoint(this.x,this.y);
+    return this;
+  }
+}
 
 ///////////////////
