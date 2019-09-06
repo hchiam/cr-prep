@@ -144,7 +144,8 @@ input + br, br { /* br's right after input's */
   z-index: -5;
   border-radius: 0;
   font-family: monospace;
-  color: white;
-  text-shadow: black 0px 0px 1px;
+  color: black;
+  text-shadow: white 0px 0px 10px;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
