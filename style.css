@@ -149,3 +149,7 @@ input + br, br { /* br's right after input's */
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
+
+#temporary-message {
+  background: yellow;
+}

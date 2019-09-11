@@ -1,6 +1,13 @@
 let checked = [false,false,false, false,false,false, false,false,false];
 let code = '_';
 
+setTimeout(replaceMessageWithButton, 5000);
+
+function replaceMessageWithButton() {
+  document.getElementById('temporary-message').style.display = 'none';
+  document.getElementById('print-page').style.visibility = 'visible';
+}
+
 function printPage() {
   document.title = 'cr-prep-' + code + '.pdf';
   window.print();
