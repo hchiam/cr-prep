@@ -150,8 +150,6 @@ input + br, br { /* br's right after input's */
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  margin: auto;
-  width: 50%;
-  text-align: center;
+#temporary-message {
+  background: yellow;
 }
