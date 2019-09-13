@@ -30,13 +30,16 @@
            title="https://cr-prep.glitch.me/" 
            onclick="copyUrlToClipboard()">Before code review, I chose to:</a>
       </h3>
-      <input id="4" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up important" 
+      <input id="4" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-4" 
+                                                                         class="shift-7px-up important" 
                                                                          onmouseover="hoverInfo(4)" 
                                                                          onmouseout="hoverInfo(-1)">Test in IE</span><br>
-      <input id="7" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up important" 
+      <input id="7" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-7" 
+                                                                         class="shift-7px-up important" 
                                                                          onmouseover="hoverInfo(7)" 
                                                                          onmouseout="hoverInfo(-1)">Run site render tests (e.g. perf and UI checks)</span><br>
-      <input id="8" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up important" 
+      <input id="8" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-8" 
+                                                                         class="shift-7px-up important" 
                                                                          onmouseover="hoverInfo(8)" 
                                                                          onmouseout="hoverInfo(-1)">Run software tests (e.g. backend unit tests)</span><br>
       

@@ -17,6 +17,15 @@ function getRandomNumber(min,max) {
   return min + Math.floor(Math.random() * max);
 }
 
+function updateSpanColor(id) {
+  let isChecked = document.getElementById(id).checked;
+  if (isChecked) {
+    document.getElementById('span-' + id).style.color = 'blue';
+  } else {
+    document.getElementById('span-' + id).style.color = 'red';
+  }
+}
+
 function updateImage(id) {
   let isChecked = document.getElementById(id).checked;
   checked[id] = isChecked;
