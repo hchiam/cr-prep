@@ -7,7 +7,7 @@ function setUpDownloadPageAsImage() {
           updateCheckboxesFormatting();
       }
       html2canvas(document.body).then(function(canvas) {
-        simulateDownloadImageClick(canvas.toDataURL(), code + '.png');
+        simulateDownloadImageClick(canvas.toDataURL(), 'cr-prep-' + code + '.png');
         document.getElementById('button-bar').style.visibility = 'visible';
       });
     });
