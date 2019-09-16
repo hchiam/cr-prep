@@ -1,11 +1,29 @@
 let checked = [false,false,false, false,false,false, false,false,false];
 let code = '_';
 
-setTimeout(replaceMessageWithButton, 5000);
+setTimeout(replaceMessageWithButton, 3000);
+
+setUpDownloadPageAsImage(); // <- need to have beforehand loaded download-page-as-image.js
+
+function updateCheckboxesFormatting() {
+  let specialSpans = [4,7,8];
+  for (let i in specialSpans) {
+    let id = specialSpans[i];
+    updateSpanColor(id);
+  }
+  
+  let inputs = document.querySelectorAll('input');
+  for (let i=0; i < inputs.length; i++) {
+    let input = inputs[i];
+    input.style.width = '30px'
+    input.style.height = '30px'
+  }
+}
 
 function replaceMessageWithButton() {
   document.getElementById('temporary-message').style.display = 'none';
   document.getElementById('print-page').style.visibility = 'visible';
+  document.getElementById('download-page-as-image').style.visibility = 'visible';
 }
 
 function printPage() {

@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="/style.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js" defer></script>
+    <script src="download-page-as-image.js" defer></script>
+    <script src="script.js" defer></script>
   </head>  
   <body>
     <div id="button-bar">
       <p id="temporary-message">
         Choose what applies to your task.
       </p>
+      <button id="download-page-as-image" 
+              style="visibility: hidden;">
+        Save as Image
+      </button>
       <button id="print-page" 
               onclick="printPage()" 
               title="This button will not show up in the printout." 
