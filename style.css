@@ -76,6 +76,10 @@ hr {
     display: none !important;
   }
   
+  #checkbox-box {
+    width: 100%;
+  }
+  
 }
 
 @media not print {
