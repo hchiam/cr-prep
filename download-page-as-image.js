@@ -1,4 +1,5 @@
 // requires html2canvas <- https://html2canvas.hertzen.com/dist/html2canvas.min.js
+// requires script.js to already be included
 
 function setUpDownloadPageAsImage() {
     document.getElementById("download-page-as-image").addEventListener("click", function() {
