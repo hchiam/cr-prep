@@ -128,6 +128,20 @@ function hoverInfo(i) {
   }
 }
 
+function progressiveDisclosure(classClicked) {
+  const order = '4780123569';
+  classClicked = classClicked.replace('c', '');
+  for (let i=0; i<order.length; i++) {
+    if (order[i] === classClicked) {
+      let classToShow = '.c' + order[i+1];
+      document.querySelectorAll(classToShow)[0].style.visibility = 'visible';
+      document.querySelectorAll(classToShow)[1].style.visibility = 'visible';
+      document.querySelector(classToShow + '+span').style.visibility = 'visible';
+      break;
+    }
+  }
+}
+
 /////////////////
 
 const w = document.getElementById('checkbox-box').offsetWidth;
