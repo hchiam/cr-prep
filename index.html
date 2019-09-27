@@ -36,45 +36,65 @@
            title="https://cr-prep.glitch.me/" 
            onclick="copyUrlToClipboard()">Before code review, I chose to:</a>
       </h3>
-      <input id="4" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-4" 
-                                                                         class="shift-7px-up important" 
-                                                                         onmouseover="hoverInfo(4)" 
-                                                                         onmouseout="hoverInfo(-1)">Test in IE</span><br>
-      <input id="7" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-7" 
-                                                                         class="shift-7px-up important" 
-                                                                         onmouseover="hoverInfo(7)" 
-                                                                         onmouseout="hoverInfo(-1)">Run site render tests (e.g. perf and UI checks)</span><br>
-      <input id="8" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-8" 
-                                                                         class="shift-7px-up important" 
-                                                                         onmouseover="hoverInfo(8)" 
-                                                                         onmouseout="hoverInfo(-1)">Run software tests (e.g. backend unit tests)</span><br>
+      <label>
+        <input id="4" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-4" 
+                                                                           class="shift-7px-up important" 
+                                                                           onmouseover="hoverInfo(4)" 
+                                                                           onmouseout="hoverInfo(-1)">Test in IE</span><br>
+      </label>
+      <label>
+        <input id="7" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-7" 
+                                                                           class="shift-7px-up important" 
+                                                                           onmouseover="hoverInfo(7)" 
+                                                                           onmouseout="hoverInfo(-1)">Run site render tests (e.g. perf and UI checks)</span><br>
+      </label>
+      <label>
+        <input id="8" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-8" 
+                                                                           class="shift-7px-up important" 
+                                                                           onmouseover="hoverInfo(8)" 
+                                                                           onmouseout="hoverInfo(-1)">Run software tests (e.g. backend unit tests)</span><br>
+      </label>
       
-      <input id="0" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(0)" 
-                                                                         onmouseout="hoverInfo(-1)">Do a more "painful"/"risky" task first</span><br>
-      <input id="1" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(1)" 
-                                                                         onmouseout="hoverInfo(-1)">Type out a list of steps of how I plan to do the task</span><br>
-      <input id="2" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(2)" 
-                                                                         onmouseout="hoverInfo(-1)">Check if our existing code base has a solution</span><br>
-      <input id="3" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(3)" 
-                                                                         onmouseout="hoverInfo(-1)">Google how others solved a similar problem</span><br>
-      <input id="5" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(5)" 
-                                                                         onmouseout="hoverInfo(-1)">Create unit tests for backend/frontend code (consider 
-          <span onclick="alert('SCIE (or ICES) = Simple, Complex, Invalid, Empty')"
-                title="Simple, Complex, Invalid, Empty" 
-                class="hover-info">SCIE</span>)
-        </span>
-      <br>
-      <input id="6" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(6)" 
-                                                                         onmouseout="hoverInfo(-1)">Run UI style test (example: with Selenium or an in-browser style linter)</span><br>
-      <input id="9" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                         onmouseover="hoverInfo(9)" 
-                                                                         onmouseout="hoverInfo(-1)">Demo the fix to a "non-task" tester</span><br>
+      <label>
+        <input id="0" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(0)" 
+                                                                           onmouseout="hoverInfo(-1)">Do a more "painful"/"risky" task first</span><br>
+      </label>
+      <label>
+        <input id="1" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(1)" 
+                                                                           onmouseout="hoverInfo(-1)">Type out a list of steps of how I plan to do the task</span><br>
+      </label>
+      <label>
+        <input id="2" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(2)" 
+                                                                           onmouseout="hoverInfo(-1)">Check if our existing code base has a solution</span><br>
+      </label>
+      <label>
+        <input id="3" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(3)" 
+                                                                           onmouseout="hoverInfo(-1)">Google how others solved a similar problem</span><br>
+      </label>
+      <label>
+        <input id="5" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(5)" 
+                                                                           onmouseout="hoverInfo(-1)">Create unit tests for backend/frontend code (consider 
+            <span onclick="alert('SCIE (or ICES) = Simple, Complex, Invalid, Empty')"
+                  title="Simple, Complex, Invalid, Empty" 
+                  class="hover-info">SCIE</span>)
+          </span>
+        <br>
+      </label>
+      <label>
+        <input id="6" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(6)" 
+                                                                           onmouseout="hoverInfo(-1)">Run UI style test (example: with Selenium or an in-browser style linter)</span><br>
+      </label>
+      <label>
+        <input id="9" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
+                                                                           onmouseover="hoverInfo(9)" 
+                                                                           onmouseout="hoverInfo(-1)">Demo the fix to a "non-task" tester</span><br>
+      </label>
       <div style="text-align:center; margin: 0; font-size: x-small;">
         <a title="https://cr-prep.glitch.me/" 
            onclick="copyUrlToClipboard()">https://cr-prep.glitch.me</a>
