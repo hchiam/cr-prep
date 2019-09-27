@@ -38,9 +38,9 @@ function getRandomNumber(min,max) {
 function updateSpanColor(id) {
   let isChecked = document.getElementById(id).checked;
   if (isChecked) {
-    document.getElementById('span-' + id).style.color = 'blue';
+    document.getElementsByClassName('span-' + id)[0].style.color = 'blue';
   } else {
-    document.getElementById('span-' + id).style.color = 'red';
+    document.getElementsByClassName('span-' + id)[0].style.color = 'red';
   }
 }
 
