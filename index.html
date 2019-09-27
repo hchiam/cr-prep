@@ -36,49 +36,66 @@
            title="https://cr-prep.glitch.me/" 
            onclick="copyUrlToClipboard()">Before code review, I chose to:</a>
       </h3>
+      <div><span style="margin-left:4px;">Yes</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="margin-left:10x;">No</span></div>
       <label>
-        <input id="4" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-4" 
-                                                                           class="shift-7px-up important" 
-                                                                           onmouseover="hoverInfo(4)" 
-                                                                           onmouseout="hoverInfo(-1)">Test in IE</span><br>
+        <input id="4" class="c4" name="4" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);updateSpanColor(id);">
+        <input class="c4" name="4" type="radio" onclick="progressiveDisclosure(this.className);updateSpanColor('4');">
+        <span id="span-4" 
+              class="shift-7px-up important" 
+              onmouseover="hoverInfo(4)" 
+              onmouseout="hoverInfo(-1)">Test in IE</span><br>
       </label>
       <label>
-        <input id="7" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-7" 
-                                                                           class="shift-7px-up important" 
-                                                                           onmouseover="hoverInfo(7)" 
-                                                                           onmouseout="hoverInfo(-1)">Run site render tests (e.g. perf and UI checks)</span><br>
+        <input id="7" class="c7" name="7" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);updateSpanColor(id);">
+        <input class="c7" name="7" type="radio" onclick="progressiveDisclosure(this.className);updateSpanColor('7');">
+        <span id="span-7" 
+              class="shift-7px-up important" 
+              onmouseover="hoverInfo(7)" 
+              onmouseout="hoverInfo(-1)">Run site render tests (e.g. perf and UI checks)</span><br>
       </label>
       <label>
-        <input id="8" type="checkbox" onclick="updateImage(this.id);updateSpanColor(id);"><span id="span-8" 
-                                                                           class="shift-7px-up important" 
-                                                                           onmouseover="hoverInfo(8)" 
-                                                                           onmouseout="hoverInfo(-1)">Run software tests (e.g. backend unit tests)</span><br>
+        <input id="8" class="c8" name="8" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);updateSpanColor(id);">
+        <input class="c8" name="8" type="radio" onclick="progressiveDisclosure(this.className);updateSpanColor('8');">
+        <span id="span-8" 
+              class="shift-7px-up important" 
+              onmouseover="hoverInfo(8)" 
+              onmouseout="hoverInfo(-1)">Run software tests (e.g. backend unit tests)</span><br>
       </label>
       
       <label>
-        <input id="0" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(0)" 
-                                                                           onmouseout="hoverInfo(-1)">Do a more "painful"/"risky" task first</span><br>
+        <input id="0" class="c0" name="0" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c0" name="0" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(0)" 
+              onmouseout="hoverInfo(-1)">Do a more "painful"/"risky" task first</span><br>
       </label>
       <label>
-        <input id="1" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(1)" 
-                                                                           onmouseout="hoverInfo(-1)">Type out a list of steps of how I plan to do the task</span><br>
+        <input id="1" class="c1" name="1" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c1" name="1" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(1)" 
+              onmouseout="hoverInfo(-1)">Type out a list of steps of how I plan to do the task</span><br>
       </label>
       <label>
-        <input id="2" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(2)" 
-                                                                           onmouseout="hoverInfo(-1)">Check if our existing code base has a solution</span><br>
+        <input id="2" class="c2" name="2" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c2" name="2" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(2)" 
+              onmouseout="hoverInfo(-1)">Check if our existing code base has a solution</span><br>
       </label>
       <label>
-        <input id="3" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(3)" 
-                                                                           onmouseout="hoverInfo(-1)">Google how others solved a similar problem</span><br>
+        <input id="3" class="c3" name="3" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c3" name="3" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(3)" 
+              onmouseout="hoverInfo(-1)">Google how others solved a similar problem</span><br>
       </label>
       <label>
-        <input id="5" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(5)" 
-                                                                           onmouseout="hoverInfo(-1)">Create unit tests for backend/frontend code (consider 
+        <input id="5" class="c5" name="5" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c5" name="5" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(5)" 
+              onmouseout="hoverInfo(-1)">Create unit tests for backend/frontend code (consider 
             <span onclick="alert('SCIE (or ICES) = Simple, Complex, Invalid, Empty')"
                   title="Simple, Complex, Invalid, Empty" 
                   class="hover-info">SCIE</span>)
@@ -86,14 +103,18 @@
         <br>
       </label>
       <label>
-        <input id="6" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(6)" 
-                                                                           onmouseout="hoverInfo(-1)">Run UI style test (example: with Selenium or an in-browser style linter)</span><br>
+        <input id="6" class="c6" name="6" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c6" name="6" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(6)" 
+              onmouseout="hoverInfo(-1)">Run UI style test (e.g.: with Selenium or in-browser style linter)</span><br>
       </label>
       <label>
-        <input id="9" type="checkbox" onclick="updateImage(this.id)"><span class="shift-7px-up" 
-                                                                           onmouseover="hoverInfo(9)" 
-                                                                           onmouseout="hoverInfo(-1)">Demo the fix to a "non-task" tester</span><br>
+        <input id="9" class="c9" name="9" type="radio" onclick="updateImage(this.id);progressiveDisclosure(this.className);">
+        <input class="c9" name="9" type="radio" onclick="progressiveDisclosure(this.className);">
+        <span class="shift-7px-up" 
+              onmouseover="hoverInfo(9)" 
+              onmouseout="hoverInfo(-1)">Demo the fix to a "non-task" tester</span><br>
       </label>
       <div style="text-align:center; margin: 0; font-size: x-small;">
         <a title="https://cr-prep.glitch.me/" 
